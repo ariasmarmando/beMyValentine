@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card" aria-label="Valentine question card">
+      <div class="header">
+        <div class="badge" aria-hidden="true">💘</div>
+        <h1>Would you be my valentine?</h1>
+        <p class="subtitle">No pressure. (Okay… a little.)</p>
+      </div>
+
+      <div class="stage" id="stage" aria-label="Button stage">
+        <button id="yesBtn" class="btn yes" type="button">Yes! 💖</button>
+
+        <button
+          id="noBtn"
+          class="btn no"
+          type="button"
+          aria-label="No (not really an option)"
+        >
+          No 😅
+        </button>
+      </div>
+
+      <p class="hint" id="hint" aria-live="polite">Try choosing wisely.</p>
+
+      <footer class="footer">
+        <span class="tiny"
+          >Made with questionable ethics and lots of hearts.</span
+        >
+      </footer>
+    </main>
+
+    <!-- Celebration + Video overlay -->
+    <div id="overlay" class="overlay" aria-hidden="true">
+      <div
+        class="overlay-inner"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Celebration message"
+      >
+        <!-- Celebration view -->
+        <div id="celebrateView">
+          <div class="big-heart" aria-hidden="true">💗</div>
+          <h2>Wise choice Young Padawan..</h2>
+          <p>
+            Best decision you’ll make today.
+            <br />
+            <span class="small"
+              >Video surprise in <strong><span id="countdown">5</span></strong
+              >… 💘</span
+            >
+          </p>
+
+          <button id="playNowBtn" class="btn reset" type="button">
+            Play now ▶️
+          </button>
+          <button id="resetBtn" class="btn reset" type="button">
+            Do it again ✨
+          </button>
+        </div>
+
+        <!-- Video view -->
+        <div id="videoView" class="video-view" hidden>
+          <h2 class="video-title">💖 For you 💖</h2>
+
+          <div class="video-frame-wrap">
+            <div id="video-container"></div>
+          </div>
+
+          <div class="video-actions">
+            <button id="closeVideoBtn" class="btn reset" type="button">
+              Close
+            </button>
+            <button id="resetBtn2" class="btn reset" type="button">
+              ✨ Restart ✨
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
