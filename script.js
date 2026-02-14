@@ -282,8 +282,10 @@
     src += (src.includes("?") ? "&" : "?") + "autoplay=1&playsinline=1";
 
     const iframe = document.createElement("iframe");
-    iframe.width = "560";
-    iframe.height = "315";
+iframe.width = "100%";
+iframe.height = "100%";
+iframe.style.width = "100%";
+iframe.style.height = "100%";
     iframe.src = src;
     iframe.title = "YouTube video player";
     iframe.frameBorder = "0";
