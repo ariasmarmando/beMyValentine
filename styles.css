@@ -198,7 +198,7 @@ h1 {
 }
 
 .overlay-inner {
-  width: min(560px, 92vw);
+   width: min(900px, 96vw);
   padding: 26px 22px 20px;
   border-radius: 22px;
   text-align: center;
